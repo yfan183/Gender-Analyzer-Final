@@ -27,7 +27,7 @@ function analyzeImage(callback) {
     imagereader.onloadend = function () {
         //After loading the file it validates the file type to be jpeg/jpg/png and let's the user know if it isn't
         if (!file.name.match(/\.(jpg|jpeg|png)$/)) {
-            appHeader.innerHTML = "Please ensure your image file type is jpg or png.";
+            appHeader.innerHTML = "Please ensure your image file type is jpg or jpeg.";
         }
         else {
             //if file is a photo it sends the file reference back up
