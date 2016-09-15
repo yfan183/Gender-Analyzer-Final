@@ -71,11 +71,11 @@ function sendGenderRequest(file, callback) {
             callback(faceAttributes);
         }
         else {
-            appHeader.innerHTML = "Hmm, the face in the photo doesn't seem to belong to a human. Try another?";
+            appHeader.innerHTML = "Hmm, we didn't manage to detect a human face. Try another?";
         }
     })
         .fail(function (error) {
-        appHeader.innerHTML = "Sorry, something went wrong. :( Try again in a bit?";
+        appHeader.innerHTML = "Oops, something went wrong. :( Try again in a bit?";
         console.log(error.getAllResponseHeaders());
     });
 }
