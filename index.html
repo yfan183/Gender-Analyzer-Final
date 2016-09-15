@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gender Analyser</title>
+        <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    <!-- 
+To collect end-user usage analytics about your application, 
+insert the following script into each page you want to track.
+Place this code immediately before the closing </head> tag,
+and before any other scripts. Your first data will appear 
+automatically in just a few seconds.
+-->
+<script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;s.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(s);try{t.cookie=u.cookie}catch(h){}for(t.queue=[],i=["Event","Exception","Metric","PageView","Trace","Dependency"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+    }({
+        instrumentationKey:"ba1a8f0f-72dc-4db4-90fb-12a071486c5e"
+    });
+       
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
+    <body>
+        <div class="container" id="main-body-container">
+            <h1 id="app-title">
+                <span class="glyphicon glyphicon-heart-empty"></span> Gender Analyzer <span class="glyphicon glyphicon-heart-empty"></span>
+            </h1>
+
+            <h2 id="app-header">
+                We will try to identify the gender of the person that you want to know.
+            </h2>
+            <img id="input-image" src="">
+            <div class="btn-wrapper">
+                <label class="btn btn-danger" for="file-selector">
+                    <input id="file-selector" type="file">
+                    Upload a picture of someone
+                </label>
+            </div>
+        </div>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+html { 
+    background: url("http://www.designbolts.com/wp-content/uploads/2014/03/Purple-Blur-Background1.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    color: white;
+    background-color: transparent;
+}
+
+h1#app-title {
+    font-size:85px;
+    font-family: cursive;
+}
+
+h2#app-header {
+    padding-top:20px;
+    padding-bottom:20px;
+    font-family: cursive;
+}
+
+img#input-image{
+    width:250px;
+    height:250px;
+    padding:20px;
+    display:none;
+    margin: 0 auto;
+}
+
+body #main-body-container {
+    margin-top: 150px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+input#file-selector {
+    display:none;
+}
+
+.btn-wrapper {
+    padding: 20px 0; 
+}
+
+
+
