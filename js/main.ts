@@ -1,4 +1,5 @@
 var currentGender;
+var datalength;
 var appHeader = $("#app-header")[0];
 var mainContainer = $("#main-body-container")[0];
 var imageSelector = $("#file-selector")[0];
@@ -38,12 +39,18 @@ function analyzeImage(callback) {
 }
 function UI_Response() {
     //Show detected gender
-    appHeader.innerHTML = "The person's gender is: " + currentGender.name; 
-    //Show gender icon
+    if (datalength > 1){
+        appHeader.innerHTML = "There were " + datalength +" people in the photo, that's too much for us to handle, one person at a time please."    
+    }
+    else{
+        appHeader.innerHTML = "The person's gender is: " + currentGender.name;
+        //Show gender icon
     var image = $("#input-image")[0]; //determines a predefined area on our webpage to show the gender
     image.src = currentGender.icon; //link that area to the gender of our currentGender.
     image.style.display = "block"; //formatting the icon's placement
     mainContainer.style.marginTop = "20px";
+    }
+    
 }
 
 function sendGenderRequest(file, callback) {
@@ -62,6 +69,8 @@ function sendGenderRequest(file, callback) {
         if (data.length != 0) {
             // returns faceAttribute from Face API
             var faceAttributes = data[0].faceAttributes;
+            var datalength1 = data.length;
+            datalength = datalength1;
             callback(faceAttributes);
         }
         else {
